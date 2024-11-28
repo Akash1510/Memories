@@ -1,6 +1,7 @@
 from main import db
 
 class Friend(db.Model):
+    __bind_key__ = 'friends'
     id = db.Column(db.Integer,primary_key=True)
     name = db.Column(db.String(80),nullable=False)
     role = db.Column(db.String(80),nullable=False)
